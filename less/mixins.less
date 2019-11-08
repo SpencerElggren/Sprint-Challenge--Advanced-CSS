@@ -1,1 +1,51 @@
 // Mixins Here
+.flexhead(){
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.mobileFlex(){
+  width: 100%;
+}
+
+.btns(@text, @back){
+  color: @text;
+  background-color: @back;
+  border-radius: 15%;
+  text-align: center;
+  font-size: 2rem;
+  width: 30%;
+  padding: 2%;
+  &:hover{
+    background-color: @text;
+    color: @back;
+  }
+}
+
+.btnAnim(@first, @second, @third){
+  @keyframes btnAnimate {
+    0% {background-color: @first; color: white}
+    25% {background-color: @second;color: white}
+    50% {background-color: @third;color: white}
+    75% {background-color: @second;color: white}
+    100%{background-color: @first;color: white}
+  }
+  animation-name: btnAnimate;
+  animation-duration: 5s;
+  animation-iteration-count: 3;
+}
+
+.imgAnim(@first, @second, @third) {
+  @keyframes borderChange {
+    0% {border: 2px solid @first;}
+    25% {border: 2px solid @second;}
+    50% {border: 2px solid @third;}
+    75% {border: 2px solid @second;}
+    100% {border: 2px solid @first;}
+  }
+  animation-name: borderChange;
+  animation-duration: 5s;
+  animation-iteration-count: 3;
+}
