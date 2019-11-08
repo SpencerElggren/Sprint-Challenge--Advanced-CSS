@@ -1,1 +1,28 @@
 // Navigation code here
+.navigation{
+  position: fixed;
+  top:0;
+  width: 100%;
+  .flexhead();
+  background-color: gainsboro;
+  opacity: 80%;
+  .name{
+    font-size: 4rem;
+    padding: 2%;
+  }
+  nav{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 40%;
+    @media @mobile {
+      width: 80%;
+    }
+    a{
+      text-decoration: none;
+      color: black;
+      font-size: 1.8rem;
+      padding-bottom: 4%;
+    }
+  }
+}
